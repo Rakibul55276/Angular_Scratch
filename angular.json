@@ -3,17 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "myselfscrstch": {
+    "tr": {
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot":"src",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/myselfscrstch",
+            "outputPath": "dist/tr",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "myselfscrstch:build"
+            "browserTarget": "tr:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "myselfscrstch:build:production"
+              "browserTarget": "tr:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "myselfscrstch:build"
+            "browserTarget": "tr:build"
           }
         },
         "test": {
@@ -89,6 +88,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +111,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "myselfscrstch:serve"
+            "devServerTarget": "tr:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "myselfscrstch:serve:production"
+              "devServerTarget": "tr:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "myselfscrstch"
+    }
+  },
+  "defaultProject": "tr",
+  "cli": {
+    "analytics": "c0e4b70b-4080-41f2-baa6-19129797cf7c"
+  }
 }
